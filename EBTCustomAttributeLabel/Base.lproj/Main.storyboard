@@ -30,9 +30,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHj-Hs-rpg">
+                                <rect key="frame" x="99.5" y="338" width="176" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JyY-Xe-2NR"/>
+                                    <constraint firstAttribute="width" constant="176" id="K4V-zT-Foz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="NHj-Hs-rpg" firstAttribute="top" secondItem="FMF-sr-Pet" secondAttribute="bottom" constant="26" id="DsD-Oy-Ycm"/>
+                            <constraint firstItem="NHj-Hs-rpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LAG-EK-rlQ"/>
                             <constraint firstAttribute="trailing" secondItem="FMF-sr-Pet" secondAttribute="trailing" id="T3q-2t-Z5A"/>
                             <constraint firstItem="FMF-sr-Pet" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gWe-cw-tfN"/>
                             <constraint firstItem="FMF-sr-Pet" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="jYa-aZ-qlL"/>
@@ -42,6 +54,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="lbl_Content" destination="FMF-sr-Pet" id="ym8-cx-5EB"/>
+                        <outlet property="lbl_Result" destination="NHj-Hs-rpg" id="ojN-ah-B6h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@
 #import "EBTAttributeLinkClickLabel.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet EBTAttributeLinkClickLabel *lbl_Content;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_Result;
 
 @end
 
@@ -20,11 +21,18 @@
     
     
 
-    NSString *text = @"Lorem ipsum dolor sit amet";
+    NSString *text = @"已阅读并同意《发标授权协议》《代扣协议》";
+     __weak typeof(self)weakSelf = self;
     [self.lbl_Content attributeLinkLabelText:text withLinksAttribute:nil withLinkClickCompleteHandler:^(NSInteger linkedURLTag) {
+        
+         __strong typeof(self)strongSelf = weakSelf;
+        strongSelf.lbl_Result.text = [NSString stringWithFormat:@"当前点击的tag%ld",linkedURLTag];
         NSLog(@"linkedURLTag =%ld",linkedURLTag);
         
-    } withUnderLineTextString:@" amet",@" sit",nil];
+        
+        
+        
+    } withUnderLineTextString:@"《发标授权协议》",@"《代扣协议》",nil];
     
 
 }
@@ -36,11 +44,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (void)attributedLabel:(TTTAttributedLabel *)label
-   didSelectLinkWithURL:(NSURL *)url{
-
-    NSLog(@"url=%@",url);
 }
 
 
