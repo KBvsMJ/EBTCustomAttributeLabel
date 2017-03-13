@@ -1,0 +1,6 @@
+framework module Pods_EBTCustomAttributeLabel {
+  umbrella header "Pods-EBTCustomAttributeLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
