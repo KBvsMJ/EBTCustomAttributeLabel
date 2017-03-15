@@ -46,7 +46,7 @@
     
 }
 
-- (void)attributeLinkLabelText:(NSString *)textString withLinksAttribute:(NSDictionary *)attributeDictionary withLinkClickCompleteHandler:(EBTAttributeLinkClickLabelCompleteHandler)linkCompleteHandler withUnderLineTextString:(NSString *)underLineString, ...{
+- (void)attributeLinkLabelText:(NSString *)textString withLinksAttribute:(NSDictionary *)attributeDictionary withActiveLinkAttributes:(NSDictionary *)activeDictionary withLinkClickCompleteHandler:(EBTAttributeLinkClickLabelCompleteHandler)linkCompleteHandler withUnderLineTextString:(NSString *)underLineString, ...{
 
     mylinkCompleteHander = [linkCompleteHandler copy];
     
@@ -56,7 +56,10 @@
                                         };
     
     
-    
+    self.activeLinkAttributes = activeDictionary?:@{
+                                                    (NSString *)kCTForegroundColorAttributeName:
+                                                        (__bridge id)[[UIColor clearColor] CGColor]
+                                                    };
     [self.array_underlineString removeAllObjects];
     
     va_list argument_String;
