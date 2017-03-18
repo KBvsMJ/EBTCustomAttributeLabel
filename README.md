@@ -13,7 +13,8 @@
 <pre>
      NSString *text = @"已阅读并同意《发标授权协议》《代扣协议》";
      __weak typeof(self)weakSelf = self;
-    [self.lbl_Content attributeLinkLabelText:text withLinksAttribute:nil  withActiveLinkAttributes:nil      withLinkClickCompleteHandler:^(NSInteger linkedURLTag) {
+    [self.lbl_Content attributeLinkLabelText:text withLinksAttribute:nil  
+    withActiveLinkAttributes:nil withLinkClickCompleteHandler:^(NSInteger linkedURLTag) {
          __strong typeof(weakSelf)strongSelf = weakSelf;
         strongSelf.lbl_Result.text = [NSString stringWithFormat:@"当前点击的tag%ld",linkedURLTag];
         NSLog(@"linkedURLTag =%ld",linkedURLTag); 
