@@ -1,4 +1,12 @@
-# label添加下划线以及实现添加点击事件
+# label添加下划线以及实现添加点击事件(支持xib或者sb)
+
+##支持cocoapods,使用pod指令把类库添加到项目中
+
+```
+   pod 'EBTCustomAttributeLabel'
+```
+
+
 
 ##使用案例:
 
