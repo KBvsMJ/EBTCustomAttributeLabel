@@ -107,6 +107,5 @@
     if (mylinkCompleteHander) {
         mylinkCompleteHander([url.absoluteString integerValue]?:0);
     }
-    NSLog(@"url=%@",url);
 }
 @end
